@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+thead[class="ant-table-thead"] th {
+  background-color: #192e6e !important;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  border: none !important;
+}
+
+td.ant-table-column-sort {
+  background-color: transparent !important;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: none;
+}
+
+.ant-collapse-item {
+  border-bottom: 2px solid #37a3fe !important;
+}
+
+.ant-collapse-header {
+  font-size: 23px;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-family: "Inter", sans-serif;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+  font-size: 23px !important;
+}
+
+.ant-switch-checked {
+  background-color: #9AE66E !important;
+}
+
+.ant-table-body::-webkit-scrollbar, body::-webkit-scrollbar {
+  background-color: #0B0B47;
+  width: 0.5em;
+  height: 2em;
+  z-index: 99;
+  position: relative;
+}
+
+.ant-table-body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background-color: #37a3fe;
+  border-radius: 10px;
+  size: 1px;
+}
+
+.ant-table-cell-scrollbar {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.ant-table-container table > thead > tr:first-child th {
+  border-radius: 0 !important;
+}
+/*# sourceMappingURL=main.css.map */

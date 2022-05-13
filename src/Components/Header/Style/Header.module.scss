@@ -1,0 +1,386 @@
+@import "../../../Style/Variables.scss";
+@import "../../../Style/Mixins.scss";
+.header {
+  background-color: transparent;
+  width: 100%;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: $clastrans;
+  z-index: 99;
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+}
+.scrolledHeader{
+  background-color:$softBlue;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.navItem {
+  margin: 0 10px;
+  list-style: none;
+  &:hover {
+    .navIconUp {
+      transform: rotate(180deg);
+    }
+  }
+}
+.navIconUp {
+  transition: $clastrans;
+}
+.dropdownLink {
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    color: $mainColor;
+  }
+}
+
+.navSubWrapper {
+  @include flexrowastart;
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  height: 100%;
+  .navSubList {
+    margin: 0;
+    .navSubItem {
+      height: 100%;
+    }
+  }
+}
+.navSubTextWrapper {
+  min-height: 110px;
+}
+.navSubList {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  min-width: 250px;
+  max-width: 300px;
+  margin-top: 15px;
+  .navSubItem {
+    width: 100%;
+    list-style: none;
+    &:hover {
+      .navSubTextWrapperHoverless {
+        .navSubText {
+          color: $mainColor;
+        }
+      }
+      .navSubTextWrapper {
+        .navSubLinkOptionsWrapper {
+          display: block;
+        }
+        .navSubTextBottom {
+          display: none;
+        }
+        .navSubText {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+.navSubLink {
+  @include flexrowjstart;
+  padding: 15px;
+  width: 100%;
+
+  &:hover {
+    background-color: #e4f6ff;
+    .navSubText {
+      color: $mainColor;
+    }
+  }
+}
+.navSubIcon {
+  margin-right: 5px;
+  font-size: 20px;
+  color: $mainColor;
+  min-width: 25px;
+}
+
+.navSubText {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+.navSubStartLink {
+  @include flexalstart;
+  padding: 15px;
+  width: 100%;
+  &:hover {
+    background-color: #e4f6ff;
+  }
+}
+.navSubHeader {
+  margin: 15px 10px;
+  font-weight: 650;
+  font-size: 15px;
+}
+.navSubTextBottom {
+  color: #888;
+}
+.navSubLinkOptionsWrapper {
+  display: none;
+  width: 100%;
+}
+.navSubLinkOptions {
+  @include flexrowbetween;
+  flex-wrap: wrap;
+}
+.navSubOptionLink {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+.navSubOptionLinkDash {
+  display: inline-block;
+  margin: 0 10px;
+  color: #555;
+}
+.navSubTextWrapperHoverless {
+  width: 100%;
+}
+.navLinkTag {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 10px;
+  border-radius: 5px;
+  background: linear-gradient(270deg, #ff4a3c 0%, #ff8031 100%);
+  padding: 0 2px;
+  font-weight: bold;
+  font-family: $poppinsFont;
+  letter-spacing: 1px;
+  color: #fff !important;
+  border-bottom-left-radius: 0;
+}
+
+.dropdornSignupLink {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: $clastrans;
+  &:hover {
+    border: 1px solid $mainColor;
+  }
+}
+.navItemIcon {
+  font-size: 25px;
+}
+.navSubInner {
+  margin: 10px;
+  text-align: center;
+  padding: 15px;
+  .navSubMainLinkText {
+    color: #555;
+    font-size: 15px;
+    font-family: $poppinsFont;
+    display: block;
+    font-weight: 600;
+  }
+  .navSubMainLinkImg {
+    width: 100px;
+  }
+}
+.navSubMainLinkButton {
+  width: 150px;
+  margin: 10px 0;
+  background-color: $mainColor;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-family: $poppinsFont;
+  font-weight: 600;
+  transition: $clastrans;
+  outline: none;
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid $mainColor;
+    background-color: #fff;
+    color: $mainColor;
+  }
+}
+
+.navGlobalInner {
+  width: 100%;
+  @include flexrowastart;
+  .globalList {
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+    .globalListTitle {
+      text-align: start;
+      font-size: 15px;
+      font-family: $mainFont;
+      color: #777;
+      font-weight: 600;
+      margin: 10px;
+    }
+    .globalListItem {
+      @include flexrowbetween;
+      list-style: none;
+      transition: $clastrans;
+      cursor: pointer;
+      &:hover {
+        background-color: #e4f6ff;
+        .globalListItemText {
+          color: $mainColor;
+        }
+      }
+      width: 100%;
+      padding: 10px 15px;
+      .globalListItemText {
+        font-size: 13px;
+        color: #555;
+        font-weight: 600;
+        transition: $clastrans;
+      }
+      .globalListItemIcon {
+        color: $mainColor;
+        font-size: 17px;
+      }
+    }
+  }
+}
+.selectedLang {
+  color: $mainColor !important;
+}
+.searchWrapper {
+  min-width: 250px;
+  padding-bottom: 10px;
+}
+.navSearchInner {
+  padding: 15px;
+  width: 100%;
+
+  .navSearch {
+    width: 100%;
+
+    .navSearchInput {
+      border: 2px solid #e5e5e5;
+      padding: 5px;
+      outline: none;
+      transition: $clastrans;
+      font-family: $mainFont;
+      color: #555;
+      font-weight: 600;
+      width: 100%;
+      &:focus {
+        border: 2px solid $mainColor;
+      }
+    }
+  }
+}
+.logoMobile {
+  display: none;
+  width: 50px;
+  height: auto;
+}
+@media screen and (max-width: 1477.99px) {
+  .navLinkTag {
+    right: -5px !important;
+  }
+  .navItem {
+    margin: 0 7px !important;
+  }
+  .navItemIcon {
+    font-size: 19px !important;
+  }
+  .dropdownLink {
+    font-size: 17px !important;
+  }
+  .logo {
+    display: none !important;
+  }
+  .logoMobile {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 1274.99px) {
+  .dropdownLink {
+    font-size: 14px !important;
+  } 
+  .navItem {
+    margin: 0 5px !important;
+  }
+}
+.searchList {
+  overflow-y: auto;
+  max-height: 400px;
+  margin: 0 1px;
+  padding: 0;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.5em;
+    height: 2em;
+    z-index: 99;
+    position: relative;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(187, 187, 187);
+    border-radius: 10px;
+    size: 1px;
+  }
+
+  .searchListItem {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .searchItemWrapper {
+    padding: 10px;
+    display: block;
+    &:hover {
+      background-color: #e4f6ff;
+    }
+  }
+}
+.searchListIconWrapper {
+  width: 25px;
+  height: 25px;
+  margin-right: 2px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .coinIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.searchListCoinName {
+  font-family: $interFont;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.coinRank {
+  font-family: $interFont;
+  font-size: 14px;
+  color: $mainColor;
+  font-weight: 600;
+}
+.navSearchTitle {
+  padding: 0 15px;
+  margin: 5px 0;
+
+  .navSearchTitleText {
+    font-family: $interFont;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+  }
+}

@@ -1,0 +1,441 @@
+@import "../../../Style/Variables.scss";
+@import "../../../Style/Mixins.scss";
+
+.product {
+  padding: 100px 0;
+  height: 100%;
+  background: url("../../../Assets/Featured/bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tableWrapper {
+  background-color: $mainColor;
+  padding: 5px 0;
+  width: 100%;
+
+  .tableInner {
+    width: 100%;
+    height: 100%;
+    .tableTop {
+      border-bottom: 2px solid $softBlue;
+      padding: 5px;
+      .inputWrapper {
+        position: relative;
+        width: 100%;
+        .searchInput {
+          width: 100%;
+          border-radius: 5px;
+          border: 2px solid #efefef;
+          padding: 4px 25px;
+          outline: none;
+          transition: $clastrans;
+          font-family: $interFont;
+          color: #000;
+
+          &:focus {
+            border: 2px solid $softBlue;
+          }
+        }
+        .searchIcon {
+          position: absolute;
+          left: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 20px;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.tableImgWrapper {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  @include flexrowcenter;
+  .tableImage {
+    width: 100%;
+    height: 100%;
+  }
+}
+.tableName {
+  font-family: $interFont;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+.tableNameLong {
+  font-size: 9px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: $interFont;
+  overflow-x: hidden;
+  max-width: 70px;
+}
+.tablePrice {
+  font-family: $interFont;
+  font-size: 12px;
+  color: $pColor;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.tableChange {
+  font-size: 11px;
+  font-family: $interFont;
+}
+.priceUp {
+  color: $green;
+}
+.priceDown {
+  color: $red;
+}
+.tableVolume {
+  font-size: 10px;
+  font-family: $interFont;
+  color: rgb(185, 185, 185);
+  font-weight: 600;
+}
+.tableStar {
+  font-size: 14px !important;
+}
+.tableProduct {
+  th {
+    font-size: 12px !important;
+  }
+}
+.firstRow {
+  background-color: $softBlue;
+  border: none !important;
+  td {
+    padding: 5px !important;
+  }
+  &:hover {
+    td {
+      background-color: #233b83 !important;
+    }
+  }
+  td {
+    border: none !important;
+  }
+}
+.secondRow {
+  background-color: #192e6e;
+  td {
+    padding: 5px !important;
+  }
+  &:hover {
+    td {
+      background-color: #112f8a !important;
+    }
+  }
+  td {
+    border: none !important;
+  }
+}
+.dNone {
+  display: none !important;
+}
+
+// Product Detail
+
+.productDetail {
+  width: 100%;
+  height: 100%;
+
+  .productDetailTop {
+    background-color: $softBlue;
+    padding: 10px;
+
+    .productNameInfo {
+      height: 100%;
+      .productImageWrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+        .productImage {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .productNameWrapper {
+        padding: 0 3px;
+
+        .productName {
+          font-size: 23px;
+          font-family: $interFont;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 550;
+
+          &:nth-child(1) {
+            &:hover {
+              color: $mainColor !important;
+            }
+          }
+          &:nth-child(2) {
+            margin-right: 10px;
+          }
+        }
+        .productIcon {
+          font-size: 18px;
+          color: #fff;
+          margin-right: 5px;
+        }
+        .productNameLong {
+          color: #fff;
+          text-decoration: underline;
+          font-family: $interFont;
+          transition: $clastrans;
+          &:hover {
+            color: $mainColor !important;
+          }
+        }
+      }
+    }
+  }
+}
+.productPriceInfo {
+  width: 100%;
+
+  .productCurrencyIcon {
+    font-size: 18px;
+    color: $pColor;
+    margin-right: 5px;
+  }
+  .productPriceValue {
+    font-family: $interFont;
+    font-size: 23px;
+  }
+}
+.productPriceChange {
+  font-size: 20px;
+  font-family: $interFont;
+  margin: 0 10px;
+  @include flexrowcenter;
+}
+.productVolumeInfo {
+  width: 100%;
+
+  .productVolumeTitle {
+    font-size: 15px;
+    color: $pColor;
+    font-family: $interFont;
+  }
+  .productVolumeValue {
+    font-size: 15px;
+    color: #fff;
+    font-family: $interFont;
+  }
+}
+
+.tradeOptions {
+  width: 100%;
+  height: 100%;
+  background-color: #233b83;
+  .tradeOptionsBar {
+    padding-top: 10px;
+
+    .tradeOptionsBarItem {
+      padding: 5px 10px;
+      background-color: transparent;
+      height: 100%;
+      width: 130px;
+
+      cursor: pointer;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      &:hover {
+        background-color: #112f8a !important;
+      }
+      .tradeOptionsBarItemTitle {
+        max-width: 70px;
+        font-family: $interFont;
+        color: #fff;
+        font-size: 14px;
+      }
+      .tradeOptionsBarItemText {
+        font-family: $interFont;
+        color: $pColor;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.selected {
+  background-color: $softBlue !important;
+
+  .tradeOptionsBarItemTitle {
+    color: $mainColor !important;
+    font-weight: 600;
+  }
+}
+.tradeOptionsBarItemPercent {
+  background-color: rgba(255, 41, 41, 0.301);
+  color: $red;
+  font-family: $interFont;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+.tradeOptionsMain {
+  width: 100%;
+  height: 100%;
+  background-color: $softBlue;
+  padding: 10px;
+}
+
+.buyorSell {
+  width: 100%;
+  padding: 5px 0;
+
+  .buyorSellTopArea {
+    border-bottom: 1px solid rgb(42, 83, 94);
+    padding: 5px 0;
+    width: 100%;
+
+    .buyorSellTitle {
+      color: #fff;
+      font-family: $interFont;
+      font-size: 16px;
+    }
+    .buyorSellButton {
+      color: $mainColor;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+.coinName {
+  font-family: $interFont;
+  text-transform: uppercase;
+}
+.buyorSellSubTitle {
+  font-family: $interFont;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: $clastrans;
+
+  &:hover {
+    color: $mainColor !important;
+  }
+}
+
+.buyorSellSubTitleCount {
+  margin-right: 10px;
+  font-size: 14px;
+  font-family: $interFont;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.buyorSellInputWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 15px 0;
+
+  .buyorSellInput {
+    width: 100%;
+    padding: 8px 8px 8px 150px;
+    border-radius: 5px;
+    border: 2px solid #2b4cad;
+    outline: none;
+    color: $pColor;
+    font-family: $interFont;
+    text-align: end;
+    background-color: #233b83;
+    transition: $clastrans;
+    &:focus {
+      border: 2px solid $mainColor;
+    }
+  }
+}
+.buyorSellInputText {
+  position: absolute;
+  font-weight: 600;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $pColor;
+  font-family: $interFont;
+  font-size: 14px;
+}
+
+.buyText {
+  color: $green;
+}
+.sellText {
+  color: $red;
+}
+.buyorSellBtn {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-family: $interFont;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  &:hover {
+    outline: 3px solid #2b7dada4;
+  }
+}
+.buyBtn {
+  background: rgb(154, 230, 110);
+  background: radial-gradient(
+    circle,
+    rgba(154, 230, 110, 1) 0%,
+    rgba(116, 185, 129, 1) 100%
+  );
+}
+
+.sellBtn {
+  background: rgb(255, 63, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 63, 0, 1) 0%,
+    rgba(230, 126, 94, 1) 100%
+  );
+}
+.product_top_wrapper{
+  @include flexrowbetween;
+}
+.priceandvalue_wrapper{
+  @include flexrowbetween;
+  width: 100%;
+}
+
+@media screen and (max-width: 991.98px) {
+  .product_row {
+    flex-direction: column-reverse !important;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .priceandvalue_wrapper{
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 500.98px) {
+.product_top_wrapper{
+  flex-direction: column !important;
+}
+.productNameInfo{
+  margin-bottom: 20px !important;
+}
+}

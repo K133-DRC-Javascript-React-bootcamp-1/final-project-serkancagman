@@ -1,0 +1,14 @@
+export { default as Header } from "./Header/Header";
+export {default as HeaderMobile} from "./HeaderMobile/HeaderMobile";
+export { default as Banner } from "./Banner/Banner";
+export { default as Featured } from "./Featured/Featured";
+export { default as AboutIco } from "./AboutIco/AboutIco";
+export { default as Rating } from "./Rating/Rating";
+export { default as WhoWeAre } from "./WhoWeAre/WhoWeAre";
+export { default as MobileApp } from "./MobileApp/MobileApp";
+export { default as FAQ } from "./FAQ/Faq";
+export { default as News } from "./News/News";
+export { default as Contact } from "./Contact/Contact";
+export { default as Footer } from "./Footer/Footer";
+export { default as Market } from "./Market/Market";
+export { default as Product } from "./Product/Product";

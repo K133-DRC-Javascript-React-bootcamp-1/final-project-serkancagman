@@ -1,0 +1,148 @@
+@import "../../../Style/Variables.scss";
+@import "../../../Style/Mixins.scss";
+
+.header_mobile {
+  width: 100%;
+  padding: 3px 0;
+
+  .header_mobile_inner {
+    @include flexrowbetween;
+    width: 100%;
+
+    .logo {
+      margin-right: 10px;
+
+      .logoImg {
+        width: 180px;
+        height: auto;
+      }
+    }
+    .btn_menu {
+      background-color: transparent;
+      border: none;
+      margin-left: 10px;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+}
+.nav {
+  display: none;
+  padding: 20px 0;
+  margin-top: 10px;
+  overflow-y: auto;
+  max-height: 90vh;
+  &::-webkit-scrollbar {
+    background-color: $bgColor;
+    width: 0.5em;
+    height: 2em;
+    z-index: 99;
+    position: relative;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $mainColor;
+    border-radius: 10px;
+    size: 1px;
+  }
+  .nav_list {
+    padding: 0;
+    margin: 0;
+
+    .nav_item {
+      list-style: none;
+      width: 100%;
+      &:hover {
+        .nav_list_sub {
+          display: block !important;
+        }
+      }
+      .nav_link {
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 550;
+        font-family: $interFont;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.show_nav {
+  display: block !important;
+}
+
+.nav_list_sub {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #133496;
+  display: none;
+  .nav_item_sub {
+    list-style: none;
+
+    .nav_link_sub {
+      padding: 10px;
+      cursor: pointer;
+      @include flexrowjstart;
+      transition: $clastrans;
+      &:hover {
+        background-color: #2a479e;
+      }
+      .nav_icon_sub {
+        font-size: 20px;
+        color: $mainColor;
+      }
+      .nav_link_sub_text {
+        color: #fff;
+        font-size: 16px;
+        font-family: $interFont;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+.nav_list_sub_Inner {
+  padding: 0 10px 10px 10px;
+
+  .nav_link_sub_text {
+    color: $pColor;
+    font-size: 15px;
+    font-family: $interFont;
+  }
+
+  .btn_sub {
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: 600;
+    color: $pColor;
+  }
+}
+.nav_icon{
+  margin-right: 10px;
+  font-size: 20px;
+}
+.nav_link_sub_header {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: $interFont;
+  font-size: 15px;
+  color: rgb(179, 179, 179);
+  padding: 10px;
+}
+.nav_link_tag {
+  font-size: 10px;
+  border-radius: 5px;
+  background: linear-gradient(270deg, #ff4a3c 0%, #ff8031 100%);
+  padding: 0 2px;
+  font-weight: bold;
+  font-family: $poppinsFont;
+  letter-spacing: 1px;
+  color: #fff !important;
+}
+.nav_link_sub_icon {
+  color: $mainColor;
+  font-size: 20px;
+}
