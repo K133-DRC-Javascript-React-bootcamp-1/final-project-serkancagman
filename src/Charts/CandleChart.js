@@ -31,13 +31,11 @@ const CandleChart = ({ coin }) => {
   }, [data]);
 
   const config = {
-    appendPadding: [10, 0, 10, 0],
+    appendPadding: [10, 0, 0, 0],
     data: chartData,
     xField: "trade_date",
     yField: ["open", "close", "high", "low"],
-    slider: {
-      scrollable: true,
-    },
+    slider: {},
     seriesField: "close",
     risingFill: "#9AE66E",
     fallingFill: "#FF3F00",

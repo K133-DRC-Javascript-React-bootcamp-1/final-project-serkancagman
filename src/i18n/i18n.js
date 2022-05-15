@@ -77,7 +77,7 @@ i18n
         },
       },
     },
-    react: { useSuspens: false },
+    react: { useSuspense: false },
   });
 
 export default i18n;
